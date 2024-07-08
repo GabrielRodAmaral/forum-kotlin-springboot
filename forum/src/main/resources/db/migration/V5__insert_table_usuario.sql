@@ -1,0 +1,1 @@
+INSERT INTO usuario values(1, 'KotlinatorOfMetal', 'Kotlinator@gmail.com');
