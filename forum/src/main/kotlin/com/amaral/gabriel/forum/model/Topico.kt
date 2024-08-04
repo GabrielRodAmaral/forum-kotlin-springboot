@@ -1,6 +1,7 @@
 package com.amaral.gabriel.forum.model
 
 import jakarta.persistence.*
+import java.time.LocalDate
 import java.time.LocalDateTime
 
 @Entity
@@ -18,5 +19,6 @@ data class Topico(
     val status: StatusTopico = StatusTopico.NAO_RESPONDIDO,
     // Mapped by topico que é o nome do atributo na classe resposta
     @OneToMany(mappedBy = "topico")
-    val respostas: List<Resposta> = emptyList()
+    val respostas: List<Resposta> = emptyList(),
+    var dataAlteracao: LocalDate? = null
 )
